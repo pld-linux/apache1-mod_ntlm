@@ -5,7 +5,7 @@ Summary:	This is the NTLM authentication module for Apache
 Summary(pl):	Modu³ uwierzytelnienia NTLM dla Apache
 Name:		apache1-mod_%{mod_name}
 Version:	0.4
-Release:	0.2
+Release:	0.3
 Epoch:		1
 License:	GPL
 Group:		Networking/Daemons
@@ -15,7 +15,6 @@ Patch0:		%{name}-security.patch
 URL:		http://modntlm.sourceforge.net/
 BuildRequires:	%{apxs}
 BuildRequires:	apache1-devel >= 1.3.33-2
-Requires(post,preun):	%{apxs}
 Requires:	apache1 >= 1.3.33-2
 Obsoletes:	apache-mod_%{mod_name} <= %{epoch}:%{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -57,7 +56,7 @@ if [ -f /var/lock/subsys/apache ]; then
 	/etc/rc.d/init.d/apache restart 1>&2
 fi
 
-%preun
+%postun
 if [ "$1" = "0" ]; then
 	if [ -f /var/lock/subsys/apache ]; then
 		/etc/rc.d/init.d/apache restart 1>&2
