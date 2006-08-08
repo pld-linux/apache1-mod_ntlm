@@ -35,7 +35,7 @@ u¿yciem protoko³u NTLM).
 
 %prep
 %setup -q -n mod_%{mod_name}-%{version}
-%patch -p1
+%patch0 -p1
 
 %build
 %{__make} APXS=%{apxs}
