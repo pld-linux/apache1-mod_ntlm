@@ -2,7 +2,7 @@
 %define		mod_name	ntlm
 %define 	apxs		/usr/sbin/apxs1
 Summary:	This is the NTLM authentication module for Apache
-Summary(pl):	Modu≥ uwierzytelnienia NTLM dla Apache
+Summary(pl.UTF-8):   Modu≈Ç uwierzytelnienia NTLM dla Apache
 Name:		apache1-mod_%{mod_name}
 Version:	0.4
 Release:	0.3
@@ -28,10 +28,10 @@ This is an authentication module for Apache that allows you to
 authenticate HTTP clients using samba or windows-like server (using
 NTLM protocol).
 
-%description -l pl
-To jest modu≥ uwierzytelnienia dla Apache pozwalaj±cy na
-uwierzytelnianie klientÛw HTTP poprzez sambÍ lub serwer na Windows (z
-uøyciem protoko≥u NTLM).
+%description -l pl.UTF-8
+To jest modu≈Ç uwierzytelnienia dla Apache pozwalajƒÖcy na
+uwierzytelnianie klient√≥w HTTP poprzez sambƒô lub serwer na Windows (z
+u≈ºyciem protoko≈Çu NTLM).
 
 %prep
 %setup -q -n mod_%{mod_name}-%{version}
