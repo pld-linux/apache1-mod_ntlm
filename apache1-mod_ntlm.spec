@@ -13,8 +13,7 @@ Source0:	http://dl.sourceforge.net/modntlm/mod_%{mod_name}-%{version}.tar.gz
 # Source0-md5:	5e9b8d1abf872926d6ff01a05a7deb2a
 Patch0:		%{name}-security.patch
 URL:		http://modntlm.sourceforge.net/
-BuildRequires:	apache1-apxs
-BuildRequires:	apache1-devel >= 1.3.33-2
+BuildRequires:	apache1-devel >= 1.3.39
 BuildRequires:	rpmbuild(macros) >= 1.268
 Requires:	apache1 >= 1.3.33-2
 Obsoletes:	apache-mod_ntlm <= 1:0.4
